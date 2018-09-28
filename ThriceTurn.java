@@ -64,8 +64,11 @@ public class ThriceTurn{
 			System.out.println("First die roll: " + dieOne);
 			System.out.println("Second die roll: " + dieTwo);
 			System.out.println("Third die roll: " + dieThree);
+			System.out.println("End of roll: " + roll + 1);
 			tally = tally + Math.pow(3,round);
-			if (dieOne == dieTwo && dieTwo == dieThree){
+			if (! (dieOne == dieTwo && dieTwo == dieThree){
+				tally = tally + Math.pow(3,round);
+			else{
 				System.out.println("You got a triplet!")
 				if (dieOne == tripletsWorth){
 					System.out.println("Your triplet is equal to round one's triplet");
